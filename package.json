@@ -18,7 +18,7 @@
   },
   "scripts": {
     "dev": "vite",
-	  "build": "vite build",
+    "build": "vite build",
     "prettier": "npx pretty-quick",
     "preversion": "npx pretty-quick && npm run test",
     "postversion": "git push && git push --tags",

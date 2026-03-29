@@ -44,7 +44,7 @@ let DurationCountDownTimeElements = (function() {
       );
 
       if (playlist == null && songIndex == null) {
-        durationTimeRemainingSelectors[i].innerHTML = timeRemaining;
+        durationTimeRemainingSelectors[i].textContent = timeRemaining;
       }
     }
   }
@@ -67,7 +67,7 @@ let DurationCountDownTimeElements = (function() {
       );
 
       if (songIndex == null) {
-        durationTimeRemainingSelectors[i].innerHTML = timeRemaining;
+        durationTimeRemainingSelectors[i].textContent = timeRemaining;
       }
     }
   }
@@ -91,7 +91,7 @@ let DurationCountDownTimeElements = (function() {
         );
 
         if (playlist == null) {
-          durationTimeRemainingSelectors[i].innerHTML = timeRemaining;
+          durationTimeRemainingSelectors[i].textContent = timeRemaining;
         }
       }
     }
@@ -117,7 +117,7 @@ let DurationCountDownTimeElements = (function() {
     );
 
     for (let i = 0; i < durationTimeRemainingSelectors.length; i++) {
-      durationTimeRemainingSelectors[i].innerHTML = timeRemaining;
+      durationTimeRemainingSelectors[i].textContent = timeRemaining;
     }
   }
 
@@ -130,7 +130,7 @@ let DurationCountDownTimeElements = (function() {
     );
 
     for (let i = 0; i < durationTimeRemainingSelectors.length; i++) {
-      durationTimeRemainingSelectors[i].innerHTML = "00";
+      durationTimeRemainingSelectors[i].textContent = "00";
     }
   }
 

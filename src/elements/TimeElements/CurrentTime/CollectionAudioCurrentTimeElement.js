@@ -34,9 +34,9 @@ export class CollectionAudioCurrentTimeElement {
             let elementAudioIndex = element.getAttribute('data-amplitude-audio-index');
 
             if( ( activeCollectionKey == elementCollectionKey ) && ( activeAudioIndex == elementAudioIndex ) ){
-                element.innerHTML = formattedTime;
+                element.textContent = formattedTime;
             }else{
-                element.innerHTML = '00:00';
+                element.textContent = '00:00';
             }
         })
     }
@@ -51,9 +51,9 @@ export class CollectionAudioCurrentTimeElement {
             let elementAudioIndex = element.getAttribute('data-amplitude-audio-index');
 
             if( ( activeCollectionKey == elementCollectionKey ) && ( activeAudioIndex == elementAudioIndex ) ){
-                element.innerHTML = this.#currentTime.hours;
+                element.textContent = this.#currentTime.hours;
             }else{
-                element.innerHTML = '00';
+                element.textContent = '00';
             }
         });
     }
@@ -68,9 +68,9 @@ export class CollectionAudioCurrentTimeElement {
             let elementAudioIndex = element.getAttribute('data-amplitude-audio-index');
 
             if( ( activeCollectionKey == elementCollectionKey ) && ( activeAudioIndex == elementAudioIndex ) ){
-                element.innerHTML = this.#currentTime.minutes;
+                element.textContent = this.#currentTime.minutes;
             }else{
-                element.innerHTML = '00';
+                element.textContent = '00';
             }
         });
     }
@@ -85,9 +85,9 @@ export class CollectionAudioCurrentTimeElement {
             let elementAudioIndex = element.getAttribute('data-amplitude-audio-index');
 
             if( ( activeCollectionKey == elementCollectionKey ) && ( activeAudioIndex == elementAudioIndex ) ){
-                element.innerHTML = this.#currentTime.seconds;
+                element.textContent = this.#currentTime.seconds;
             }else{
-                element.innerHTML = '00';
+                element.textContent = '00';
             }
         });
     }

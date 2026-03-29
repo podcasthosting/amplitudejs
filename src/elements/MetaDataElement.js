@@ -132,7 +132,7 @@ export class MetaDataElement {
             element.setAttribute('src', value);
         }else{
             value = value || "";
-            element.innerHTML = value;
+            element.textContent = value;
         }
     }
 

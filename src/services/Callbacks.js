@@ -28,10 +28,21 @@ export class Callbacks{
     ];
 
     handleNativeAudioElementEvents(){
+        if( this._boundHandlers ){
+            this._boundHandlers.forEach( function( handler, event ){
+                config.audio_element.removeEventListener( event, handler );
+            });
+        }
+
+        this._boundHandlers = new Map();
+
+        let self = this;
         this.#events.forEach( function( event ){
-            config.audio_element.addEventListener( event, function( ){
+            let handler = function(){
                 Callbacks.run( event );
-            } );
+            };
+            self._boundHandlers.set( event, handler );
+            config.audio_element.addEventListener( event, handler );
         });
     }
 

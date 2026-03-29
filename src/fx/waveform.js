@@ -37,7 +37,7 @@ let WaveForm = (function() {
         /*
           Clear the inner HTML of the element if we are replacing the waveform.
         */
-        waveforms[i].innerHTML = "";
+        waveforms[i].textContent = "";
 
         /*
           Inserts an SVG into the element.

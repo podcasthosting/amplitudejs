@@ -15,6 +15,9 @@ export class AudioEndedEvent{
             if( ConfigState.getScope() == 'collection' && ConfigState.getContinueNext() ){
                 let navigation = new Navigation();
                 navigation.next( ConfigState.getActiveCollection(), true );
+            }else if( config.repeat_audio ){
+                let audio = new Audio();
+                audio.play();
             }else{
                 let audio = new Audio();
                 audio.stop();

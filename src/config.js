@@ -13,6 +13,7 @@ export const config = {
 	// Amplitude State Variables
 	audio_element: new Audio(),
 	mobile: false,
+	paused: false,
 	version: version,
 
 	// Amplitude Dynamic Variables

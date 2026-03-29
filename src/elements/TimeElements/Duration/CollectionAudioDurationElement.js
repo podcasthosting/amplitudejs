@@ -42,9 +42,9 @@ export class CollectionAudioDurationElement {
                 let elementAudioIndex = element.getAttribute('data-amplitude-audio-index');
 
                 if( ( activeCollectionKey == elementCollectionKey ) && ( activeAudioIndex == elementAudioIndex ) ){
-                    element.innerHTML = formattedTime;
+                    element.textContent = formattedTime;
                 }else{
-                    element.innerHTML = '00:00';
+                    element.textContent = '00:00';
                 }
             });
         }
@@ -65,9 +65,9 @@ export class CollectionAudioDurationElement {
             let elementAudioIndex = element.getAttribute('data-amplitude-audio-index');
 
             if( ( activeCollectionKey == elementCollectionKey ) && ( activeAudioIndex == elementAudioIndex ) ){
-                element.innerHTML = formattedTime;
+                element.textContent = formattedTime;
             }else{
-                element.innerHTML = '00:00';
+                element.textContent = '00:00';
             }
         });
     }
@@ -79,9 +79,9 @@ export class CollectionAudioDurationElement {
 
         elements.forEach( ( element ) => {
             if( ( activeCollectionKey == elementCollectionKey ) && ( activeAudioIndex == elementAudioIndex ) ){
-                element.innerHTML = this.#duration.hours
+                element.textContent = this.#duration.hours
             }else{
-                element.innerHTML = '00';
+                element.textContent = '00';
             }
         } );
     }
@@ -93,9 +93,9 @@ export class CollectionAudioDurationElement {
 
         elements.forEach( ( element ) => {
             if( ( activeCollectionKey == elementCollectionKey ) && ( activeAudioIndex == elementAudioIndex ) ){
-                element.innerHTML = this.#duration.minutes
+                element.textContent = this.#duration.minutes
             }else{
-                element.innerHTML = '00';
+                element.textContent = '00';
             }
         } );
     }
@@ -107,9 +107,9 @@ export class CollectionAudioDurationElement {
 
         elements.forEach( ( element ) => {
             if( ( activeCollectionKey == elementCollectionKey ) && ( activeAudioIndex == elementAudioIndex ) ){
-                element.innerHTML = this.#duration.seconds
+                element.textContent = this.#duration.seconds
             }else{
-                element.innerHTML = '00';
+                element.textContent = '00';
             }
         } );
     }

@@ -40,9 +40,9 @@ export class AudioDurationElement {
                 let elementAudioIndex = element.getAttribute('data-amplitude-audio-index');
 
                  if( activeAudioIndex == elementAudioIndex ){
-                    element.innerHTML = formattedTime;
+                    element.textContent = formattedTime;
                 }else{
-                    element.innerHTML = '00:00';
+                    element.textContent = '00:00';
                 }
             });
         }
@@ -61,9 +61,9 @@ export class AudioDurationElement {
             let elementAudioIndex = element.getAttribute('data-amplitude-audio-index');
 
             if( activeAudioIndex == elementAudioIndex ){
-                element.innerHTML = formattedTime;
+                element.textContent = formattedTime;
             }else{
-                element.innerHTML = '00:00';
+                element.textContent = '00:00';
             }
         })
     }
@@ -74,9 +74,9 @@ export class AudioDurationElement {
 
         elements.forEach( ( element ) => {
             if( activeAudioIndex == elementAudioIndex ){
-                element.innerHTML = this.#duration.hours
+                element.textContent = this.#duration.hours
             }else{
-                element.innerHTML = '00';
+                element.textContent = '00';
             }
         } );
     }
@@ -87,9 +87,9 @@ export class AudioDurationElement {
 
         elements.forEach( ( element ) => {
             if( activeAudioIndex == elementAudioIndex ){
-                element.innerHTML = this.#duration.minutes
+                element.textContent = this.#duration.minutes
             }else{
-                element.innerHTML = '00';
+                element.textContent = '00';
             }
         } );
     }
@@ -100,9 +100,9 @@ export class AudioDurationElement {
 
         elements.forEach( ( element ) => {
             if( activeAudioIndex == elementAudioIndex ){
-                element.innerHTML = this.#duration.seconds
+                element.textContent = this.#duration.seconds
             }else{
-                element.innerHTML = '00';
+                element.textContent = '00';
             }
         } );
     }

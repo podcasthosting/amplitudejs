@@ -36,7 +36,7 @@ export class GlobalDurationElement {
                                         .replace( 'SS', timeRemaining.seconds );
             
             elements.forEach( ( element ) => {
-                element.innerHTML = formattedTime;
+                element.textContent = formattedTime;
             });
         }
     }
@@ -51,7 +51,7 @@ export class GlobalDurationElement {
 
         elements.forEach( ( element ) => {
             if( !formattedTime.includes('NaN') ){
-                element.innerHTML = formattedTime;
+                element.textContent = formattedTime;
             }
         })
     }
@@ -60,7 +60,7 @@ export class GlobalDurationElement {
         let elements = document.querySelectorAll( GlobalDurationElement.globalDurationHoursElementQuery );
 
         elements.forEach( ( element ) => {
-            element.innerHTML = this.#duration.hours;
+            element.textContent = this.#duration.hours;
         } );
     }
 
@@ -68,7 +68,7 @@ export class GlobalDurationElement {
         let elements = document.querySelectorAll( GlobalDurationElement.globalDurationMinutesElementQuery );
 
         elements.forEach( ( element ) => {
-            element.innerHTML = this.#duration.minutes;
+            element.textContent = this.#duration.minutes;
         } );
     }
 
@@ -76,7 +76,7 @@ export class GlobalDurationElement {
         let elements = document.querySelectorAll( GlobalDurationElement.globalDurationSecondsElementQuery );
 
         elements.forEach( ( element ) => {
-            element.innerHTML = this.#duration.seconds;
+            element.textContent = this.#duration.seconds;
         } );
     }
 }

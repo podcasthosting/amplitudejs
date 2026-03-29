@@ -28,7 +28,7 @@ export class GlobalCurrentTimeElement {
                                       .replace( 'SS', this.#currentTime.seconds );
 
         elements.forEach( ( element ) => {
-            element.innerHTML = formattedTime;
+            element.textContent = formattedTime;
         });
     }
 
@@ -36,7 +36,7 @@ export class GlobalCurrentTimeElement {
         let elements = document.querySelectorAll( GlobalCurrentTimeElement.globalHoursTimeElementQuery );
 
         elements.forEach( ( element ) => {
-            element.innerHTML = this.#currentTime.hours;
+            element.textContent = this.#currentTime.hours;
         });
     }
 
@@ -44,7 +44,7 @@ export class GlobalCurrentTimeElement {
         let elements = document.querySelectorAll( GlobalCurrentTimeElement.globalMinutesTimeElementQuery );
 
         elements.forEach( ( element ) => {
-            element.innerHTML = this.#currentTime.minutes;
+            element.textContent = this.#currentTime.minutes;
         });
     }
 
@@ -52,7 +52,7 @@ export class GlobalCurrentTimeElement {
         let elements = document.querySelectorAll( GlobalCurrentTimeElement.globalSecondsTimeElementQuery );
 
         elements.forEach( ( element ) => {
-            element.innerHTML = this.#currentTime.seconds;
+            element.textContent = this.#currentTime.seconds;
         });
     }
 }

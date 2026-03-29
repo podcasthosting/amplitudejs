@@ -49,8 +49,8 @@ export class Navigation {
         let index =  config.collections[ collectionIndex ].active_index;
 
         return {
-            'index': nextIndex,
-            'audio': config.collections[ collectionIndex ].shuffle ?
+            'index': index,
+            'audio': config.collections[ collectionIndex ].shuffled ?
                      config.collections[ collectionIndex ].shuffle_list[ index ] :
                      config.collections[ collectionIndex ].audio[ index ],
             'end': false
@@ -136,7 +136,7 @@ export class Navigation {
         if( config.repeat_audio ){
             return this.#repeatedAudio( collectionIndex );
         }else{
-            if( config.collections[ collectionIndex ].shuffle ){
+            if( config.collections[ collectionIndex ].shuffled ){
                 return this.#previousShuffledAudio( collectionIndex );
             }else{
                 return this.#previousCollectionAudio( collectionIndex );
